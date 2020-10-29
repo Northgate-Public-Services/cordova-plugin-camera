@@ -160,4 +160,14 @@
         <framework src="AppKit.framework" />
     </platform>
 
+    <!-- electron -->
+    <platform name="electron">
+        <js-module src="src/electron/CameraProxy.js" name="CameraProxy">
+            <merges target="" />
+        </js-module>
+        <asset src="www/electron/index.html" target="plugins/cordova-plugin-camera/www/electron/index.html" />
+        <asset src="www/electron/app.js" target="plugins/cordova-plugin-camera/www/electron/app.js" />
+        <asset src="www/electron/style.css" target="plugins/cordova-plugin-camera/www/electron/style.css" />
+    </platform>
+
 </plugin>
