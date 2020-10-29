@@ -32,7 +32,7 @@ cameraTrigger.onclick = function() {
     // cameraOutput.classList.add("taken");
     // track.stop();
     var imageData = cameraSensor.toDataURL('image/png');
-    imageData = imageData.replace('data:image/png;base64,', '');
+    //imageData = imageData.replace('data:image/png;base64,', '');
     sessionStorage.setItem('cordova-plugin-camera-picture-base64', imageData);
     sessionStorage.setItem('cordova-plugin-camera-picture-isset', 'true');
 };
