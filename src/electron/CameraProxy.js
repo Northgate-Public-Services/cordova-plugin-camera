@@ -39,8 +39,12 @@ function takePicture(success, error, opts) {
     };
     //console.log(opts);
     var cameraWindow = cordova.InAppBrowser.open('plugins/cordova-plugin-camera/www/electron/index.html', 'cameraWindow', '');
-    [...document.querySelectorAll('button')].filter(a => a.textContent.includes('✖')).forEach(a => { a.addEventListener('click', () => { error('no image selected'); }); });
-    var pictureSet = setInterval(function() {
+    document.getElementById('iab-close-btn').addEventListener('click', () => { error('no image selected'); });
+	var iabMainContainer = document.getElementById('iab-main-container');
+	iabMainContainer.style.width = '100%';
+	iabMainContainer.style.height = '100%';
+	iabMainContainer.style.borderWidth = '0px';
+	var pictureSet = setInterval(function() {
         if (sessionStorage.getItem('cordova-plugin-camera-picture-isset') === 'true') {
             clearInterval(pictureSet);
             sessionStorage.removeItem('cordova-plugin-camera-picture-isset');
