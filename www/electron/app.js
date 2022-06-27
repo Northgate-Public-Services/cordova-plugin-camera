@@ -35,6 +35,7 @@ cameraTrigger.onclick = function() {
     //imageData = imageData.replace('data:image/jpeg;base64,', '');
     sessionStorage.setItem('cordova-plugin-camera-picture-base64', imageData);
     sessionStorage.setItem('cordova-plugin-camera-picture-isset', 'true');
+    console.log(`<img src="${imageData}">`);
 };
 
 // Start the video stream when the window loads
