@@ -131,7 +131,7 @@ cameraExport.getPicture = function (successCallback, errorCallback, options) {
     const getValue = argscheck.getValue;
 
     const quality = getValue(options.quality, 50);
-    const destinationType = getValue(options.destinationType, Camera.DestinationType.FILE_URI);
+    const destinationType = getValue(options.destinationType, Camera.DestinationType.DATA_URL);
     const sourceType = getValue(options.sourceType, Camera.PictureSourceType.CAMERA);
     const targetWidth = getValue(options.targetWidth, -1);
     const targetHeight = getValue(options.targetHeight, -1);
